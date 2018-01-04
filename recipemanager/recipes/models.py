@@ -13,5 +13,10 @@ class Recipe(models.Model):
     portions = models.IntegerField()
     preparation = models.TextField()
 
+    class Meta:
+        permissions = (
+            ('view_recipe', 'Can view recipe'),
+        )
+
     def __str__(self):  # __unicode__ for Python 2
         return self.title

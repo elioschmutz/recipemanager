@@ -2,4 +2,12 @@ from django.contrib import admin
 
 from .models import Recipe
 
-admin.site.register(Recipe)
+from guardian.admin import GuardedModelAdmin
+
+
+class RecipeAdmin(GuardedModelAdmin):
+    """
+    """
+
+
+admin.site.register(Recipe, RecipeAdmin)
