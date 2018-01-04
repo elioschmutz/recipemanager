@@ -17,11 +17,15 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 from django.urls import re_path
-from recipemanager.recipe.views import RecipeViewSet
+from recipemanager.recipes.views import RecipeViewSet
+from recipemanager.users.views import UserViewSet
+from recipemanager.groups.views import GroupViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'recipes', RecipeViewSet, 'recipe')
+router.register(r'recipes', RecipeViewSet)
+router.register(r'users', UserViewSet)
+router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
