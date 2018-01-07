@@ -8,7 +8,6 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'username', 'email', 'groups', 'password')
-        extra_kwargs = {'password': {'write_only': True}}
         read_only_fields = ('groups',)
 
     def create(self, validated_data):
