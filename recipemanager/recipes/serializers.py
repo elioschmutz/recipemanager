@@ -1,6 +1,5 @@
 from .models import Recipe
 from rest_framework import serializers
-from recipemanager.users.serializers import UserSerializer
 
 
 class RecipeSerializer(serializers.HyperlinkedModelSerializer):
@@ -11,4 +10,4 @@ class RecipeSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Recipe
-        fields = '__all__'
+        fields = ('title', 'image', 'creator', 'owner')

@@ -7,8 +7,8 @@ class Recipe(models.Model):
     """
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="creator")
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="owner")
-    creation_date = models.DateField(auto_now_add=True, blank=True)
-    modification_date = models.DateField(auto_now=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
+    modified = models.DateTimeField(auto_now=True, blank=True)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='recipe_images', blank=True)
     www = models.URLField(blank=True)
