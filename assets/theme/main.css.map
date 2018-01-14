@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "../../Users/elioschmutz/projects/django/recipemanager/recipemanager/theme/static/theme/main.css",
+	"sources": [
+		"../../Users/elioschmutz/projects/django/recipemanager/recipemanager/theme/static/theme/main.scss",
+		"../../Users/elioschmutz/projects/django/recipemanager/recipemanager/theme/static/theme/_variables.scss"
+	],
+	"names": [],
+	"mappings": "AACA,AAAA,IAAI,CAAC;EAID,gBAAgB,EAAE,GAAG,GACxB;EALD,AACI,IADA,CACA,QAAQ,CAAC;IACL,gBAAgB,ECDX,OAAO,GDEf"
+}
